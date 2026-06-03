@@ -1,6 +1,14 @@
+import Image from "next/image";
 import { AFFILIATE } from "@/lib/constants";
 import AffiliateLink from "@/components/seo/AffiliateLink";
 import SectionHeading from "./SectionHeading";
+
+const REGISTRATION_IMAGE = {
+  src: "/screenshots/xx555-login.png",
+  alt: "XX555 Game registration and login guide — install APK, register with Pakistani mobile number, OTP verification, and sign in steps",
+  width: 1408,
+  height: 768,
+};
 
 const REGISTER_STEPS = [
   "Install and open XX555 Game APK.",
@@ -25,25 +33,48 @@ export default function RegistrationGuide() {
       className="scroll-mt-20 bg-slate-50 py-14"
       aria-labelledby="registration-login-heading"
     >
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="mx-auto max-w-6xl px-4">
         <SectionHeading
           id="registration-login-heading"
           title="Registration Process & XX555 Login"
         />
 
-        <h3 className="text-lg font-bold text-slate-900">Registration</h3>
-        <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
-          {REGISTER_STEPS.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
+        <figure className="mt-6 w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-card">
+          <Image
+            src={REGISTRATION_IMAGE.src}
+            alt={REGISTRATION_IMAGE.alt}
+            width={REGISTRATION_IMAGE.width}
+            height={REGISTRATION_IMAGE.height}
+            className="h-auto w-full max-w-full"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1152px"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption className="sr-only">
+            Step-by-step infographic for XX555 Game registration and login in
+            Pakistan
+          </figcaption>
+        </figure>
 
-        <h3 className="mt-8 text-lg font-bold text-slate-900">XX555 Login</h3>
-        <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
-          {LOGIN_STEPS.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
+          <div>
+            <h3 className="text-lg font-bold text-slate-900">Registration</h3>
+            <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
+              {REGISTER_STEPS.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold text-slate-900">XX555 Login</h3>
+            <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
+              {LOGIN_STEPS.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </div>
+        </div>
 
         <div className="mt-8 flex flex-wrap gap-3">
           <AffiliateLink
