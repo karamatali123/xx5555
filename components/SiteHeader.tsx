@@ -3,6 +3,7 @@ import { AFFILIATE } from "@/lib/constants";
 import Logo from "./Logo";
 
 const NAV = [
+  { href: "#table-of-contents", label: "Contents" },
   { href: "#key-features", label: "Features" },
   { href: "#available-games", label: "Games" },
   { href: "#download", label: "Download" },

@@ -1,7 +1,9 @@
 import nextDynamic from "next/dynamic";
 import JsonLd from "@/components/seo/JsonLd";
 import HeroSection from "@/components/HeroSection";
+import AppInfoSection from "@/components/AppInfoSection";
 import IntroSection from "@/components/content/IntroSection";
+import TableOfContents from "@/components/TableOfContents";
 import FeaturesSection from "@/components/FeaturesSection";
 import UserInterfaceSection from "@/components/UserInterfaceSection";
 import GamesSection from "@/components/GamesSection";
@@ -49,7 +51,9 @@ export default function HomePage() {
       <SiteHeader />
       <main id="main-content" className="pb-24 md:pb-0">
         <HeroSection />
+        <AppInfoSection />
         <IntroSection />
+        <TableOfContents />
         <FeaturesSection />
         <UserInterfaceSection />
         <GamesSection />

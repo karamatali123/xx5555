@@ -28,8 +28,10 @@ export default function IntroSection() {
         <p className="mt-4 leading-relaxed text-slate-600">
           This <strong>XX555 Pakistan</strong> guide covers download steps, UI
           features, deposit and withdrawal help, and an honest{" "}
-          <InternalLink href="#pros-cons">XX555 review</InternalLink>. For quick
-          answers, see the <InternalLink href="#faq">FAQ</InternalLink> below.
+          <InternalLink href="#pros-cons">XX555 review</InternalLink>. Use the{" "}
+          <InternalLink href="#table-of-contents">table of contents</InternalLink>{" "}
+          to jump to any section, or see the{" "}
+          <InternalLink href="#faq">FAQ</InternalLink> below.
         </p>
       </div>
     </section>
