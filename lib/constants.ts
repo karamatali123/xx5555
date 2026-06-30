@@ -1,5 +1,7 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://xx555.net.pk";
+import { CANONICAL_SITE_URL, absoluteUrl } from "@/lib/site-url";
+
+export const SITE_URL = CANONICAL_SITE_URL;
+export { absoluteUrl };
 
 /** Official affiliate / referral link */
 export const AFFILIATE_URL =
@@ -32,7 +34,7 @@ export const OG_IMAGE = "/screenshots/xx555-features.png";
 
 /** Contact email for trust pages — override via env */
 export const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@xx555.net.pk";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@xx555.org.pk";
 
 export const SITE_NAME = "XX555 Pakistan Guide";
 

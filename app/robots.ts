@@ -1,15 +1,12 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/constants";
+import { absoluteUrl } from "@/lib/site-url";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = SITE_URL.replace(/\/$/, "") || SITE_URL;
-
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${base}/sitemap.xml`,
-    host: base,
+    sitemap: absoluteUrl("/sitemap.xml"),
   };
 }
