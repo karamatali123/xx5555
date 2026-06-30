@@ -57,8 +57,8 @@ export default function HeroSection() {
           </div>
 
           <ScreenshotImage
-            src={SCREENSHOTS.home.src}
-            alt={SCREENSHOTS.home.alt}
+            src={SCREENSHOTS.features.src}
+            alt={SCREENSHOTS.features.alt}
             priority
             className="border-white/20"
           />

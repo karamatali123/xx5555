@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { APK_VERSION, LOGO, SITE_URL } from "@/lib/constants";
+import {
+  APK_VERSION,
+  LOGO,
+  OG_IMAGE,
+  PAGE_LAST_UPDATED,
+  SITE_URL,
+} from "@/lib/constants";
 
 const canonical = SITE_URL.replace(/\/$/, "") || SITE_URL;
-const ogImage = `${canonical}/screenshots/xx555-home.png`;
+const ogImage = `${canonical}${OG_IMAGE}`;
 
 const title =
-  `XX555 Game Download APK (${APK_VERSION}) Pakistan 2026`;
+  `XX555 Game Download APK ${APK_VERSION} — Login, JazzCash & Review (Pakistan 2026)`;
 
 const description =
-  "Download XX555 Game APK for Pakistan. XX555 login, JazzCash & Easypaisa deposit, fast withdrawal, games, review & FAQ. Free Android app 2026.";
+  "Complete XX555 Game guide for Pakistan: official APK download (V1.1.10), login & registration, JazzCash/Easypaisa deposit from 200 PKR, withdrawal steps, games list, honest review & 15 FAQs. Updated June 2026.";
 
 export const pageMetadata: Metadata = {
   title,
@@ -16,19 +22,21 @@ export const pageMetadata: Metadata = {
   keywords: [
     "XX555 Game",
     "XX555 Game Download APK",
-    "XX555 APK",
-    "XX555 Download",
+    "XX555 APK download",
     "XX555 Login",
+    "XX555 register",
     "XX555 Pakistan",
-    "XX555 review",
+    "XX555 JazzCash deposit",
     "XX555 Easypaisa withdrawal",
-    "XX555 JazzCash withdrawal",
+    "XX555 review",
+    "XX555 Aviator",
     "XX555 earning app",
     "XX555 bonus",
+    "XX555 game list",
   ],
-  authors: [{ name: "XX555 Pakistan Guide" }],
+  authors: [{ name: "XX555 Pakistan Guide", url: canonical }],
   creator: "XX555 Pakistan Guide",
-  publisher: "XX555 Pakistan Guide",
+  publisher: "XX555 Game Pakistan",
   formatDetection: { email: false, telephone: false },
   robots: {
     index: true,
@@ -46,19 +54,21 @@ export const pageMetadata: Metadata = {
     languages: { "en-PK": canonical },
   },
   openGraph: {
-    type: "website",
+    type: "article",
     locale: "en_PK",
     url: canonical,
     siteName: "XX555 Game Pakistan",
     title,
     description,
+    publishedTime: "2026-01-15T00:00:00+05:00",
+    modifiedTime: `${PAGE_LAST_UPDATED}T00:00:00+05:00`,
     images: [
       {
         url: ogImage,
         secureUrl: ogImage,
-        width: 1200,
-        height: 630,
-        alt: "XX555 Game Download APK Pakistan 2026 — app homepage screenshot",
+        width: 1920,
+        height: 1080,
+        alt: "XX555 Game APK features — download, JazzCash, Easypaisa, slots and Aviator for Pakistan",
         type: "image/png",
       },
     ],

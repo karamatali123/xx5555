@@ -1,38 +1,18 @@
-/** Screenshots from /screenshorts — served under /screenshots/ */
+/** Screenshots served from /public/screenshots/ */
 export const SCREENSHOTS = {
-  home: {
-    src: "/screenshots/xx555-home.png",
-    alt: "XX555.com homepage with Mystery Bonus promotion and game navigation Pakistan",
-    caption: "XX555 Game official homepage — deposit, withdrawal, and game categories",
+  features: {
+    src: "/screenshots/xx555-features.png",
+    alt: "XX555 Game key features infographic — JazzCash, Easypaisa, slots, Aviator, bonuses, and live tables for Pakistan",
+    caption: "Key features of XX555 Game APK for Pakistani players",
   },
-  casino: {
-    src: "/screenshots/xx555-casino.png",
-    alt: "XX555 Game casino lobby with Evolution, Pragmatic Play and live dealers",
-    caption: "Casino section with daily rebate offers on XX555",
-  },
-  mobileGames: {
-    src: "/screenshots/xx555-mobile-games.png",
-    alt: "XX555 Game mobile slots, fish, card games and lottery categories",
-    caption: "Mobile game categories — slots, casino, fish, and card games",
-  },
-  personalCenter: {
-    src: "/screenshots/xx555-personal-center.png",
-    alt: "XX555 Game personal center with JazzCash wallet deposit withdrawal and rewards",
-    caption: "Personal center — balance, deposit, withdrawal, and reward center",
-  },
-  rewards: {
-    src: "/screenshots/xx555-rewards.png",
-    alt: "XX555 Game rewards center daily login bonus and promotions Pakistan",
-    caption: "Receive center — daily login rewards and promotional vouchers",
+  login: {
+    src: "/screenshots/xx555-login.png",
+    alt: "XX555 Game registration and login step-by-step guide with Pakistani mobile number and OTP verification",
+    caption: "Registration and XX555 login process illustrated",
   },
 } as const;
 
-export const DOWNLOAD_STEP_IMAGES = [
-  SCREENSHOTS.home,
-  SCREENSHOTS.casino,
-  SCREENSHOTS.mobileGames,
-  SCREENSHOTS.personalCenter,
-] as const;
+export const DOWNLOAD_STEP_IMAGES = [SCREENSHOTS.features, SCREENSHOTS.login] as const;
 
 export type ScreenshotSlide = {
   src: string;
@@ -41,9 +21,6 @@ export type ScreenshotSlide = {
 };
 
 export const GALLERY_IMAGES: ScreenshotSlide[] = [
-  SCREENSHOTS.home,
-  SCREENSHOTS.casino,
-  SCREENSHOTS.mobileGames,
-  SCREENSHOTS.personalCenter,
-  SCREENSHOTS.rewards,
+  SCREENSHOTS.features,
+  SCREENSHOTS.login,
 ];

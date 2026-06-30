@@ -1,25 +1,26 @@
+import InternalLink from "@/components/seo/InternalLink";
 import SectionHeading from "./SectionHeading";
 
 const UI_POINTS = [
   {
-    title: "Clean and Simple Layout",
-    body: "Home screen shows balance, deposit, and game categories clearly.",
+    title: "Home dashboard",
+    body: "The landing screen shows your PKR balance, quick Deposit/Withdraw buttons, and scrolling banners for active promotions. Game categories appear as icon tiles below — tap any tile to enter that lobby.",
   },
   {
-    title: "Simple Navigation System",
-    body: "Top menu for Home, Slots, Casino, Card Games, Sports, and Promotions.",
+    title: "Top navigation bar",
+    body: "Persistent menu links to Home, Slots, Casino, Card Games, Sports, and Promotions. The search icon filters games by name — useful when the lobby lists hundreds of slot titles from JILI and Pragmatic Play.",
   },
   {
-    title: "Organised Game Categories",
-    body: "Games grouped by type — slots, fish, live casino, and cards.",
+    title: "Game category pages",
+    body: "Each category loads a filtered grid with thumbnail art, provider badge, and minimum bet indicator. Live casino tables show seat availability and dealer name before you join.",
   },
   {
-    title: "Responsive Design",
-    body: "Works on most Android phones from 6.0 and above.",
+    title: "Personal Center",
+    body: "Access via the profile icon: view transaction history, change password, bind JazzCash/Easypaisa wallet, check VIP level, and open the reward center for daily login bonuses.",
   },
   {
-    title: "Quick Account Access",
-    body: "Personal Center for deposit, withdrawal, rewards, and settings.",
+    title: "Mobile performance",
+    body: "The APK is 7.11 MB and runs on Android 6.0+. Interface scales to 5–7 inch screens common in Pakistan. Dark backgrounds reduce battery drain during long Aviator sessions.",
   },
 ];
 
@@ -36,11 +37,23 @@ export default function UserInterfaceSection() {
           title="User Interface of XX555 Game APK"
         />
 
-        <div className="space-y-6">
+        <p className="mb-6 text-slate-700">
+          XX555 uses a standard casino-app layout familiar to anyone who has used
+          similar earning apps in Pakistan. The interface is in English with PKR
+          currency throughout. Below is what you will see after{" "}
+          <InternalLink href="#registration-login">XX555 login</InternalLink> —
+          preview the actual screens in our{" "}
+          <InternalLink href="#screenshots">screenshots carousel</InternalLink>.
+        </p>
+
+        <div className="space-y-5">
           {UI_POINTS.map((item) => (
-            <article key={item.title}>
+            <article
+              key={item.title}
+              className="rounded-lg border border-slate-200 bg-white p-4"
+            >
               <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
-              <p className="mt-1 text-slate-600">{item.body}</p>
+              <p className="mt-1 leading-relaxed text-slate-600">{item.body}</p>
             </article>
           ))}
         </div>
